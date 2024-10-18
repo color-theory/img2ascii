@@ -38,5 +38,3 @@ loadImage(imgPath).then((image) => {
 }).catch((err) => {
   console.error('Failed to load image:', err);
 });
-
-
