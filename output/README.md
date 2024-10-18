@@ -1,0 +1,1 @@
+Folder where ascii art will be generated.
