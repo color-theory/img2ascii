@@ -1,0 +1,24 @@
+{
+  "name": "img2ascii",
+  "version": "1.0.0",
+  "description": "a quick and dirty ascii art generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/color-theory/img2ascii.git"
+  },
+  "author": "color-theory",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/color-theory/img2ascii/issues"
+  },
+  "homepage": "https://github.com/color-theory/img2ascii#readme",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
