@@ -8,4 +8,4 @@ generates ascii art from an image
 ```
 Outputs: `output/output.txt`
 
-This is currently configured for twitch chat output, but you can change the canvas size if you wnat better resolution.
+This is currently configured for twitch chat output, but you can change the canvas size if you need more resolution. Just update `canvasWidth` and `canvasHeight` as necessary.

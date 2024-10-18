@@ -4,16 +4,20 @@ import * as path from 'path';
 import { getShade } from './util/shades';
 import { getLuminance } from './util/rgb';
 
-const canvas = createCanvas(30, 15);
+// Change these values to adjust the size of the output image
+const canvasWidth = 30;
+const canvasHeight = 15;
+
+const canvas = createCanvas(canvasWidth, canvasHeight);
 const ctx = canvas.getContext('2d');
 const imgPath = path.join(__dirname, process.argv[2]);
 
-ctx.clearRect(0, 0, canvas.width, canvas.height);
+ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 
 loadImage(imgPath).then((image) => {
-  ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+  ctx.drawImage(image, 0, 0, canvasWidth, canvasHeight);
 
-  const pixelData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+  const pixelData = ctx.getImageData(0, 0, canvasWidth, canvasHeight).data;
   let visiblePixels = [];
 
   for (let i = 0; i < pixelData.length; i += 4) {
@@ -27,7 +31,7 @@ loadImage(imgPath).then((image) => {
   let lineToPrint = '';
   let output = '\r\n';
   for (let i = 0; i < visiblePixels.length; i++) {
-    if (i % canvas.width === 0) {
+    if (i % canvasWidth === 0) {
       output += lineToPrint + '\r\n';
       lineToPrint = '';
     }
